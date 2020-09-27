@@ -1,11 +1,11 @@
 import React from "react";
 import { List, ListItem, ListItemText } from "@material-ui/core";
-import { WizardStep } from "./WizardStep";
+import { IWizardStep } from "./types";
 
 interface WizardNavProps {
-  steps: Array<WizardStep>;
-  activeStep?: WizardStep;
-  onChange: (step: WizardStep) => void;
+  steps: Array<IWizardStep>;
+  activeStep?: IWizardStep;
+  onChange: (step: IWizardStep) => void;
 }
 
 export const WizardNav: React.FC<WizardNavProps> = (props) => {
