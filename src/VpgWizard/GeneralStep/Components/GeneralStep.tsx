@@ -3,11 +3,14 @@ import Box from "@material-ui/core/Box";
 import TextField from '@material-ui/core/TextField';
 import VPGContext from "../../store/context";
 import {UPDATE_INFO} from "../../store/types";
+import {IWizardStep} from "../../../Wizard/types";
 
-export const GeneralStep: React.FC = () => {
+interface GeneralStepProps {
+    meta: Partial<IWizardStep>
+}
 
+export const GeneralStep: React.FC<GeneralStepProps> = ({meta}) => {
     console.log("GeneralStep Render");
-
     const {state, dispatch} = useContext(VPGContext);
 
     const onNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {

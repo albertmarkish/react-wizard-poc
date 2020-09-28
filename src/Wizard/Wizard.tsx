@@ -9,9 +9,9 @@ import VPGContext from "../VpgWizard/store/context";
 import ReactJson from "react-json-view";
 
 interface WizardProps {
-  name: string;
-  steps: Array<IWizardStep>;
-  activeStep?: IWizardStep;
+    steps: Array<IWizardStep>;
+    title?: string;
+    activeStep?: IWizardStep;
 }
 
 export const Wizard: React.FC<WizardProps> = (props) => {
@@ -35,7 +35,7 @@ export const Wizard: React.FC<WizardProps> = (props) => {
 
     return (
         <Box display="flex" flexDirection="column" height="100%">
-            <WizardHeader/>
+            <WizardHeader>{props.title}</WizardHeader>
             <WizardNav
                 steps={props.steps}
                 activeStep={activeStep}

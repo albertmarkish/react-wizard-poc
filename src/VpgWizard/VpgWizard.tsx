@@ -14,7 +14,10 @@ export const VpgWizard: React.FC = () => {
 
     return (
         <VPGContext.Provider value={{ state, dispatch }}>
-            <Wizard name="Hello Wizard" steps={[VpgGeneralStep, VpgVmsStep, VpgReplicationStep]}/>
+            <Wizard
+                title={"Create/Edit VPG " + state.Config.Name}
+                steps={[VpgGeneralStep, VpgVmsStep, VpgReplicationStep]}
+            />
         </VPGContext.Provider>
     );
 }

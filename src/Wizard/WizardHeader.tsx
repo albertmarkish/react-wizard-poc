@@ -19,14 +19,14 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-export const WizardHeader:React.FC = () => {
+export const WizardHeader:React.FC = (props) => {
     const classes = useStyles();
 
     return (
         <AppBar position="static" color="primary">
             <Toolbar>
                 <Typography variant="h6" className={classes.title}>
-                    Create/Edit VPG [VPG-NAME]
+                    {props.children}
                 </Typography>
                 <Button color="inherit">Login</Button>
             </Toolbar>
