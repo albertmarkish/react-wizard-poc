@@ -8,8 +8,8 @@ import FormControl from '@material-ui/core/FormControl';
 import {ReplicationStepProps} from "./types";
 
 import {useGetPotentialRecoveryRegions} from "./hooks/useGetPotentialRecoveryRegions";
-import VPGContext from "../store/context";
-import {UPDATE_REPLICATION} from "../store/types";
+import VPGContext from "../../store/context";
+import {UPDATE_REPLICATION} from "../../store/types";
 
 export const ReplicationStep: React.FC<ReplicationStepProps> = () => {
     console.log("ReplicationStep Render");

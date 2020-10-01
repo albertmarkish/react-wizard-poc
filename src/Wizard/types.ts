@@ -5,6 +5,6 @@ export interface IWizardStep {
     name: string;
     component: React.ReactNode;
     modelSchema?: ObjectSchema;
-    validate?: () => void;
+    validate: () => boolean;
     index: number;
 }
